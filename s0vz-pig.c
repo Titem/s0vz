@@ -20,7 +20,7 @@
 #define BUF_LEN 64
 
 void alert(int pin, int level, uint32_t tick);
-void setup();
+int setup();
 void cfile();
 
 int pidFilehandle, vzport, i, len, running_handles, rc;
