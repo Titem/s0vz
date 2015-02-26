@@ -55,7 +55,7 @@ void cfile() {
 	{
 		syslog(LOG_INFO, "Config error > /etc/%s - %s\n", config_error_file(&cfg),config_error_text(&cfg));
 		config_destroy(&cfg);
-		daemonShutdown();
+		/* daemonShutdown(); */
 		exit(EXIT_FAILURE);
 	}
 
@@ -63,7 +63,7 @@ void cfile() {
 	{
 		syslog(LOG_INFO, "Missing 'VzServer' setting in configuration file.");
 		config_destroy(&cfg);
-		daemonShutdown();
+		/* daemonShutdown(); */
 		exit(EXIT_FAILURE);
 	}
 	else
@@ -73,7 +73,7 @@ void cfile() {
 	{
 		syslog(LOG_INFO, "Missing 'VzPort' setting in configuration file.");
 		config_destroy(&cfg);
-		daemonShutdown();
+		/* daemonShutdown(); */
 		exit(EXIT_FAILURE);
 	}
 	else
@@ -84,7 +84,7 @@ void cfile() {
 	{
 		syslog(LOG_INFO, "Missing 'VzPath' setting in configuration file.");
 		config_destroy(&cfg);
-		daemonShutdown();
+		/* daemonShutdown(); */
 		exit(EXIT_FAILURE);
 	}
 	else
