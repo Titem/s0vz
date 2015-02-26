@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
 
 	gpioSetAlertFunc(24, alert); /* call alert when LDR changes state */
 	
-	while(0)
+	while(1)
 	{
 		gpioDelay(10000);
 	}
