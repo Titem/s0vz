@@ -20,6 +20,7 @@
 #define BUF_LEN 64
 
 void alert(int pin, int level, uint32_t tick);
+void setup();
 void cfile();
 
 int pidFilehandle, vzport, i, len, running_handles, rc;
@@ -27,7 +28,7 @@ int pidFilehandle, vzport, i, len, running_handles, rc;
 const char *vzserver, *vzpath, *vzuuid[64];
 char url[128];
 
-char gpio_pin_id[] = {5, 6};
+char gpio_pin_id[] = {24, 25};
 
 int inputs = sizeof(gpio_pin_id)/sizeof(gpio_pin_id[0]);
 
